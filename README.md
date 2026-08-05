@@ -65,6 +65,14 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard \
 
 ---
 
+### This is arduino code for motor&encoder pins 
+| Motor    | Encoder     |
+| -------- | ---------- |
+|    1,0   |    7,10    |
+|    3,4   |     5,6    |
+
+---
+
 # Launch Order
 
 Start the nodes in the following order:
