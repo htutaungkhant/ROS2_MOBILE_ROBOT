@@ -44,7 +44,7 @@ This node subscribes to `/cmd_vel` and sends velocity commands to the robot.
 
 ## 5. Control the Robot with Keyboard
 
-Open another terminal and run:
+Open new terminal on remote pc and run:
 
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard \
@@ -55,7 +55,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard \
 
 ## 6. View Rviz2
 
-Open terminal on remote pc and run:
+Open another terminal on remote pc and run:
 
 ```bash
 
