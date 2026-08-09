@@ -53,6 +53,16 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard \
 -p turn:=0.4
 ```
 
+## 5. Control the Robot with Keyboard
+
+Open terminal on remote pc and run:
+
+```bash
+
+ros2 launch ros_amf_robot_description display.launch.py
+
+```
+
 ### Keyboard Controls
 
 | Key   | Action       |
