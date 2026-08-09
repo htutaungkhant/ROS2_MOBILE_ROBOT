@@ -35,7 +35,7 @@ ros2 run tf2_ros static_transform_publisher \
 Open a new terminal and run:
 
 ```bash
-ros2 run my_robot_controller cmd_test
+ros2 run my_robot_controller cmd_vel
 ```
 
 This node subscribes to `/cmd_vel` and sends velocity commands to the robot.
