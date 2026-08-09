@@ -1,6 +1,7 @@
 # 🚀 Running the Robot
 
 ## 1. Start the LiDAR Driver
+
 ```bash
 sudo ln -s /dev/ttyUSB0 /dev/sc_mini
 ---
