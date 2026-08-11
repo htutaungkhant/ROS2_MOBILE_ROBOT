@@ -10,16 +10,16 @@
 #define UART_RX_PIN 20   // ESP32 pin that receives from Pi TXD
 #define UART_TX_PIN 21   // ESP32 pin that transmits to Pi RXD
 
-#define IN1 1   // Left  motor - forward PWM
-#define IN2 0   // Left  motor - reverse PWM
+#define IN1 0   // Left  motor - forward PWM
+#define IN2 1   // Left  motor - reverse PWM
 #define IN3 4   // Right motor - forward PWM
 #define IN4 3   // Right motor - reverse PWM
 
 // Encoder pins
 #define ENC_L_A 5
 #define ENC_L_B 6
-#define ENC_R_A 7
-#define ENC_R_B 10
+#define ENC_R_A 10
+#define ENC_R_B 7
 
 volatile long countL = 0;
 volatile long countR = 0;
