@@ -12,8 +12,8 @@
 
 #define IN1 1   // Left  motor - forward PWM
 #define IN2 0   // Left  motor - reverse PWM
-#define IN3 3   // Right motor - forward PWM
-#define IN4 4   // Right motor - reverse PWM
+#define IN3 4   // Right motor - forward PWM
+#define IN4 3   // Right motor - reverse PWM
 
 // Encoder pins
 #define ENC_L_A 5
