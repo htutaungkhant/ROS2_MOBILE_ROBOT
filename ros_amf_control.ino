@@ -23,7 +23,7 @@
 
 volatile long countL = 0;
 volatile long countR = 0;
-const float CPR = 8344.0;  // GA12-N20, 7PPR x4 quadrature x 298:1 gear ratio (50RPM @6V)
+const float CPR = 4168.0;  // GA12-N20, 7PPR x4 quadrature x 298:1 gear ratio (50RPM @6V)
                             // ⚠️ actual test လုပ်ပြီး confirm ဖြစ်ရင် ဒီ value ကို ပြင်ပါ
 
 // ==================== Odometry parameters ====================
