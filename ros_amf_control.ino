@@ -27,7 +27,7 @@ const float CPR = 4168.0;  // GA12-N20, 7PPR x4 quadrature x 298:1 gear ratio (5
                             // ⚠️ actual test လုပ်ပြီး confirm ဖြစ်ရင် ဒီ value ကို ပြင်ပါ
 
 // ==================== Odometry parameters ====================
-const float WHEEL_RADIUS = 0.022;   // 44mm diameter wheel -> radius = 0.022m
+const float WHEEL_RADIUS = 0.0215;   // 44mm diameter wheel -> radius = 0.022m
 const float WHEEL_BASE   = 0.134;    // metres - ⚠️ actual ruler တိုင်းပြီး ပြင်ပါ
 const float WHEEL_CIRCUM = 2.0 * PI * WHEEL_RADIUS;
 const float DIST_PER_TICK = WHEEL_CIRCUM / CPR;
