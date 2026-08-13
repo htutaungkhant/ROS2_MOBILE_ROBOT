@@ -8,7 +8,7 @@ import serial
 import math
 import threading
 
-WHEEL_BASE = 0.16          # ⚠️ Arduino code ထဲက WHEEL_BASE နဲ့ တူညီအောင် ပြင်ပါ
+WHEEL_BASE = 0.140          # ⚠️ Arduino code ထဲက WHEEL_BASE နဲ့ တူညီအောင် ပြင်ပါ
 MAX_WHEEL_SPEED = 0.10     # m/s - 50RPM@6V motor အတွက် safety limit (~0.115 m/s max ရဲ့ ~85%)
 SERIAL_PORT = '/dev/ttyACM0'   # ls /dev/tty* နဲ့ actual port စစ်ပါ
 BAUD_RATE = 115200
