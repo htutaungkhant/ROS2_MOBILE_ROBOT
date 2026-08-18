@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<robot name="ros_amf_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find ros_amf_robot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find ros_amf_robot_description)/urdf/ros_amf_robot.ros2control.xml" />
+<xacro:include filename="$(find ros_amf_robot_description)/urdf/ros_amf_robot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0021899740700695143 0.00031037632221902084 0.04084925484756619" rpy="0 0 0"/>
+    <mass value="1.112129708784983"/>
+    <inertia ixx="0.001753" iyy="0.002291" izz="0.002883" ixy="2e-06" iyz="2e-06" ixz="-7.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ros_amf_robot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ros_amf_robot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_link">
+  <inertial>
+    <origin xyz="3.4842872277120965e-07 -0.008999602483749411 1.0430812463768646e-10" rpy="0 0 0"/>
+    <mass value="0.21207658929268144"/>
+    <inertia ixx="3.2e-05" iyy="5.2e-05" izz="3.2e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000554 0.059626 -0.023" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ros_amf_robot_description)/meshes/rightmotor_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000554 0.059626 -0.023" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ros_amf_robot_description)/meshes/rightmotor_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_link">
+  <inertial>
+    <origin xyz="3.484287296099233e-07 0.009000397516250619 1.0430812463768646e-10" rpy="0 0 0"/>
+    <mass value="0.2120765892926817"/>
+    <inertia ixx="3.2e-05" iyy="5.2e-05" izz="3.2e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000554 -0.060374 -0.023" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ros_amf_robot_description)/meshes/leftmotor_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000554 -0.060374 -0.023" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ros_amf_robot_description)/meshes/leftmotor_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="laser_link">
+  <inertial>
+    <origin xyz="2.420079634146455e-18 2.420079634146455e-18 0.007500000000000007" rpy="0 0 0"/>
+    <mass value="0.11523919289713833"/>
+    <inertia ixx="1.1e-05" iyy="1.1e-05" izz="1.8e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.078" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ros_amf_robot_description)/meshes/laser_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.078" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find ros_amf_robot_description)/meshes/laser_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="right_wheel_joint" type="continuous">
+  <origin xyz="-0.000554 -0.059626 0.023" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_link"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="left_wheel_joint" type="continuous">
+  <origin xyz="-0.000554 0.060374 0.023" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_link"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="lidar_joint" type="fixed">
+  <origin xyz="0.0 0.0 0.078" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="laser_link"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+</robot>
