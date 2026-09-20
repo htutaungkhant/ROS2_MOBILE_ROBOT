@@ -62,6 +62,12 @@ Open another terminal on remote pc and run:
 ros2 launch ros_amf_robot_description display.launch.py
 
 ```
+## 7. Foxglove bridge run
+```bash
+
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+
+```
 
 ### Keyboard Controls
 
